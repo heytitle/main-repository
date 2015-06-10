@@ -23,7 +23,7 @@
             <li class="article" ng-repeat="a in articles">
             <img ng-src="{{ a.thumbnailurl }}">
                 <div class="body">
-                    <div class="title"><a ng-href="{{ a.url }}">{{ a.title }}</a></div>
+                    <div class="title"><a ng-href="{{ a.url }}" target="blank">{{ a.title }}</a></div>
                     <div class="time">Published: {{ a.publishedDate }}</div>
                 </div>
                 <div class="toolbox">
