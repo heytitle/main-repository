@@ -24,7 +24,7 @@ angular.module('newsSearch', [ ]).controller('main', function( $scope, $template
         placeholder = placeholder.trim();
         console.log(placeholder);
 
-        PluginAPI.Editor.insertElement( placeholder );
+        PluginAPI.Editor.insertString( placeholder );
     };
 });
 
@@ -55,4 +55,4 @@ function mockData(){
             }
         ]
     }
-} 
+}
