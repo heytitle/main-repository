@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+}
+
+input {
+    font-size: 16px;
+    padding: 5px;
+}
+
+#keyword {
+    width: 80%;
+}
+
+#result {
+    padding: 5px;
+}
+
+.article {
+    list-style: none;
+    position: relative;
+    margin-top: 5px;
+    height: 80px;
+    overflow: hidden;
+    background-color:lightcyan;
+}
+
+.article img {
+    width: 30%;
+    float: left;
+}
+
+.article div.body {
+    float: left;
+    width: 65%;
+    padding: 5px;
+    height: 100%;
+}
+
+.article div.toolbox {
+    clear: both;
+}
+
+.article div.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.article div.time {
+    bottom: 3px;
+    position: absolute;
+    float: right;
+    right: 10px;
+}
+
+.article span.add-button {
+    padding: 7px;
+    background-color: wheat;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+}
