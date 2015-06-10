@@ -11,6 +11,7 @@
         <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/AH5Communicator.js"></script>
         <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/ArticleCommunicator.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script type="text/javascript">
             PluginAPI.setAppName('GonzoRelatedArticle');
         </script>
@@ -24,7 +25,8 @@
             <img ng-src="{{ a.thumbnailurl }}">
                 <div class="body">
                     <div class="title"><a ng-href="{{ a.url }}" target="blank">{{ a.title }}</a></div>
-                    <div class="time">Published: {{ a.publishedDate }}</div>
+                    <div class="ingress">Båren med Norges ambassadør i Pakistan Leif Larsen, som døde i en helikopterulykke forrige uke, ankommer Oslo Lufthavn torsdag.</div>
+                    <div class="time"><i class="fa fa-clock-o"></i> {{ a.publishedDate }}</div>
                 </div>
                 <div class="toolbox">
                     <span class="add-button" ng-click="addArticle(a)">+</span>

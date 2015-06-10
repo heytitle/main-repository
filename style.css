@@ -42,9 +42,19 @@ input {
 
 .article div.title {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.article div.ingress {
+    display: -webkit-box;
+    font-size: 14px;
+    line-height: 1;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -53,6 +63,8 @@ input {
     position: absolute;
     float: right;
     right: 10px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .article span.add-button {
