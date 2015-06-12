@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="newsSearch">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="//code.jquery.com/jquery-2.1.3.js"></script>
+        <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/vendors/jquery.postmessage.js"></script>
+        <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/Listeners.js"></script>
+        <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/PluginAPI.js"></script>
+        <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/AH5Communicator.js"></script>
+        <script src="//abcnyheter.drpublish.aptoma.no/prod/drpublish/plugin-api/js/ArticleCommunicator.js"></script>
+        <link href="//abcnyheter.drpublish.aptoma.no/prod/drpublish/css/main/all.reset.css?cbr=1426569363" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script type="text/javascript">
+            PluginAPI.setAppName('GonzoRelatedArticle');
+        </script>
+    </head>
+
+    <body ng-controller="main">
+        <input id="keyword" class="filter-query" type="text" ng-model="keyword" placeholder="Article ID / Title ..." ng-keydown="$event.which === 13 && search()"/>
+        <input id="search" class="filter-submit" type="button" value="" ng-click="search()">
+        <ul id="result">
+            <li class="article" ng-repeat="a in articles">
+                <div class="thumbnail">
+                    <img ng-src="{{ a.thumbnailurl }}"/>
+                    <div class="toolbox">
+                        <span class="add-button" ng-click="addArticle(a)">+</span>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="title"><a ng-href="{{ a.url }}" target="blank">{{ a.title }}</a></div>
+                    <div class="ingress">Båren med Norges ambassadør i Pakistan Leif Larsen, som døde i en helikopterulykke forrige uke, ankommer Oslo Lufthavn torsdag.</div>
+                    <div class="time"><i class="fa fa-clock-o"></i> {{ a.publishedDate }}</div>
+                </div>
+                
+            </li>
+        </ul>
+    </body>
+
+    <script type="text/ng-template" id="drpublish-placeholder.html">
+        <p><b>Les også:&nbsp;</b><a href="{{ article.url }}">{{ article.title }}</a></p>
+    </script>
+</html>
